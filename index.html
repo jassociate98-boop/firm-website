@@ -269,22 +269,22 @@
     </section>
     <section class="section-pad practice" id="blog">
       <div class="container">
-        <p class="eyebrow"><span></span> INSIGHTS &amp; UPDATES</p>
-        <h2 class="section-title">From our<br><em>perspective.</em></h2>
-        <div class="row g-3 mt-4">
-          <div class="col-md-6">
-            <article class="practice-card">
-              <h3>Preparing for your first legal consultation</h3>
-              <p>A few simple steps can help you make the most of your first conversation with a lawyer.</p>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="practice-card">
-              <h3>Clear agreements, stronger partnerships</h3>
-              <p>Why taking time to understand the terms can make a meaningful difference for your business.</p>
-            </article>
+        <div id="blogListing">
+          <p class="eyebrow"><span></span> INSIGHTS &amp; UPDATES</p>
+          <h2 class="section-title">From our<br><em>perspective.</em></h2>
+          <div class="row g-4 mt-4">
+            <div class="col-md-6 col-lg-4"><article class="blog-card"><img src="https://images.unsplash.com/photo-1555374018-13a8994ab246?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Digital security concept" loading="lazy"><div class="blog-card-copy"><span class="blog-category">CYBER LAW</span><h3>Cyber Fraud: What Should You Do After an Online Financial Scam?</h3><p>Preserve information, document the transaction and understand the available reporting and legal routes.</p><button class="blog-read-more" type="button" data-article="cyber-fraud">Read More <span aria-hidden="true">&#187;</span></button></div></article></div>
+            <div class="col-md-6 col-lg-4"><article class="blog-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Person reviewing digital records" loading="lazy"><div class="blog-card-copy"><span class="blog-category">CYBER LAW</span><h3>Digital Evidence in Cybercrime Matters: Why Records Matter</h3><p>Screenshots, transaction records, emails and messages can help explain and present a cyber-related dispute.</p><button class="blog-read-more" type="button" data-article="digital-evidence">Read More <span aria-hidden="true">&#187;</span></button></div></article></div>
+            <div class="col-md-6 col-lg-4"><article class="blog-card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Business contract and paperwork" loading="lazy"><div class="blog-card-copy"><span class="blog-category">FINANCIAL LAW</span><h3>Payment Disputes: Understanding the Legal Questions</h3><p>Payment disputes can involve contractual terms, transaction records, authorisation and communication between parties.</p><button class="blog-read-more" type="button" data-article="payment-disputes">Read More <span aria-hidden="true">&#187;</span></button></div></article></div>
+            <div class="col-md-6 col-lg-4"><article class="blog-card"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Business office and agreement review" loading="lazy"><div class="blog-card-copy"><span class="blog-category">BUSINESS</span><h3>Before Signing a Business Agreement: Five Legal Questions to Ask</h3><p>Understand obligations, payment terms, liability, termination and dispute-resolution provisions before signing.</p><button class="blog-read-more" type="button" data-article="business-agreement">Read More <span aria-hidden="true">&#187;</span></button></div></article></div>
+            <div class="col-md-6 col-lg-4"><article class="blog-card"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Preparing documents for a consultation" loading="lazy"><div class="blog-card-copy"><span class="blog-category">CLIENT GUIDE</span><h3>What to Prepare Before Your First Legal Consultation</h3><p>A concise timeline, relevant documents, transaction details and a clear description can make the first discussion more productive.</p><button class="blog-read-more" type="button" data-article="first-consultation">Read More <span aria-hidden="true">&#187;</span></button></div></article></div>
           </div>
         </div>
+        <article id="blogArticle" class="blog-article-view" hidden>
+          <button type="button" id="blogBack" class="blog-back">&#8592; Back to insights</button>
+          <img id="articleImage" class="blog-article-image" src="" alt="">
+          <div class="blog-article-copy"><p id="articleCategory" class="eyebrow dark"></p><h2 id="articleTitle" class="section-title"></h2><div id="articleBody" class="blog-article-body"></div><p class="blog-article-disclaimer">This article is general information, not legal advice for a specific matter. Please consult a lawyer about your circumstances.</p></div>
+        </article>
       </div>
     </section>
     <section class="section-pad contact" id="contact">
@@ -317,9 +317,10 @@
                   placeholder="you@example.com">
                 <div class="invalid-feedback">Please enter a valid email address.</div>
               </div>
-              <div class="col-12"><label for="phone" class="form-label">Phone <span
-                    class="optional">(optional)</span></label><input class="form-control" id="phone" name="phone"
-                  type="tel" autocomplete="tel" placeholder="Your phone number"></div>
+              <div class="col-12"><label for="phone" class="form-label">Phone number</label><input class="form-control" id="phone" name="phone"
+                  type="tel" autocomplete="tel" required placeholder="Your phone number">
+                <div class="invalid-feedback">Please enter your phone number.</div>
+              </div>
               <div class="col-12"><label for="matter" class="form-label">How can we help?</label><select
                   class="form-select" id="matter" name="matter" required>
                   <option value="" selected disabled>Select a practice area</option>
@@ -332,9 +333,10 @@
                 </select>
                 <div class="invalid-feedback">Please choose a practice area.</div>
               </div>
-              <div class="col-12"><label for="message" class="form-label">A brief note <span
-                    class="optional">(optional)</span></label><textarea class="form-control" id="message" name="message"
-                  rows="4" placeholder="Tell us a little about what brings you here."></textarea></div>
+              <div class="col-12"><label for="message" class="form-label">Description</label><textarea class="form-control" id="message" name="message"
+                  rows="4" required placeholder="Describe how we can help."></textarea>
+                <div class="invalid-feedback">Please describe how we can help.</div>
+              </div>
               <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center gap-3 mt-4"><button
                   class="btn btn-gold btn-lg" type="submit">Send your inquiry <span
                     aria-hidden="true">&#8599;</span></button><span class="form-note">We&apos;ll respond as soon as we
