@@ -14,11 +14,11 @@
 * {
     box-sizing: border-box
 }
-
+/* 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 86px
-}
+} */
 
 body {
     margin: 0;
@@ -941,6 +941,14 @@ body {
         padding: 75px 0
     }
 
+    .hero-shape {
+        width: 420px;
+        height: 420px;
+        right: -260px;
+        top: -175px;
+        opacity: .45
+    }
+
     .hero-card {
         margin-top: 15px
     }
@@ -1000,6 +1008,10 @@ body {
     .hero {
         padding: 62px 0 75px;
         min-height: 0
+    }
+
+    .hero-shape {
+        display: none
     }
 
     .hero h1 {
@@ -1264,3 +1276,295 @@ body {
 .blog-article-copy .section-title {
     color: #000000 !important;
 }
+@media (max-width: 540px) {
+  .navbar {
+    padding: 0.5rem !important;
+  }
+}```css
+/* =========================================================
+   MOBILE WIDTH / OVERFLOW FIX
+   Fixes horizontal overflow around 540px and below
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Keep Bootstrap containers inside viewport */
+@media (max-width: 575.98px) {
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Prevent Bootstrap rows from creating extra horizontal width */
+    .row {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Make columns stay inside viewport */
+    .row > [class*="col-"] {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* =========================
+       ABOUT INTRO
+       ========================= */
+
+    .about-intro {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .about-intro .section-pad {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about-art {
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20px;
+    }
+
+    .art-frame {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .art-frame img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* =========================
+       PRACTICE
+       ========================= */
+
+    .practice {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .practice .section-heading {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .practice .section-intro {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .practice-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .practice-card h3,
+    .practice-card p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    /* =========================
+       APPROACH
+       ========================= */
+
+    .approach {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .why-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .why-card h3,
+    .why-card p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* =========================
+       TEAM
+       ========================= */
+
+    .team-section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .team-copy {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .team-role {
+        display: block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .team-copy h3,
+    .team-copy p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contact .row {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-detail {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .contact-detail > div {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .contact-detail a,
+    .contact-detail span {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .contact-form,
+    form {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* =========================
+       HEADINGS / TEXT
+       ========================= */
+
+    .section-title {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .body-copy {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .eyebrow {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    /* Prevent long email/text from pushing page width */
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    span {
+        max-width: 100%;
+    }
+}
+
+
+/* Extra protection specifically for 540px and below */
+@media (max-width: 540px) {
+
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .section-pad,
+    .about-intro .section-pad,
+    .team-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-title {
+        font-size: clamp(32px, 9vw, 39px);
+        line-height: 1.15;
+    }
+
+    .about-promise {
+        max-width: 100%;
+        padding-left: 14px;
+    }
+
+    .practice-card,
+    .why-card,
+    .team-card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .team-monogram {
+        width: 100%;
+        max-width: 100%;
+        height: 230px;
+    }
+}
+```
